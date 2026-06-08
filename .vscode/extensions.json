@@ -1,7 +1,8 @@
 {
     "recommendations": [
         "shahilkumar.docxreader",
-        "qwtel.sqlite-viewer",
         "hediet.vscode-drawio",
+        "humao.rest-client",
+        "qwtel.sqlite-viewer",
     ]
 }
