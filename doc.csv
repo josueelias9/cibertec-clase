@@ -1,0 +1,4 @@
+endpoint,descripcion,metodo
+/,test,GET
+/init-db ,crear la DB con las tablas,GET
+/crear-blog,crear un nuevo blog de prueba,GET

@@ -18,7 +18,7 @@ conda install <>
 
 
 ```sh
-flask --app hello run
+flask --app proyecto run
 ```
 
 
