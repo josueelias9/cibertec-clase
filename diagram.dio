@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ry064Uhtu3ko85uZiqpe" name="Page-1">
-        <mxGraphModel dx="1382" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1480" dy="394" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -34,13 +34,13 @@
                 <mxCell id="11" value="model" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="280" y="640" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" style="edgeStyle=none;html=1;" edge="1" parent="1" source="12" target="27">
+                <mxCell id="29" style="edgeStyle=none;html=1;" parent="1" source="12" target="27" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="view" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="120" y="640" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" style="edgeStyle=none;html=1;" parent="1" source="15" edge="1" target="27">
+                <mxCell id="16" style="edgeStyle=none;html=1;" parent="1" source="15" target="27" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="540" y="570" as="targetPoint"/>
                     </mxGeometry>
@@ -48,26 +48,26 @@
                 <mxCell id="15" value="otro servidor&lt;div&gt;una pagina web&lt;/div&gt;&lt;div&gt;un app movil&lt;/div&gt;&lt;div&gt;etc&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/cell_phone.svg;" parent="1" vertex="1">
                     <mxGeometry x="-150" y="580" width="33.6" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="JSON" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="23" target="2">
+                <mxCell id="24" value="JSON" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" parent="1" source="23" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="servicio x&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;JSON&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="23" value="servicio x&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;JSON&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry y="160" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;URL base:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;http://127.0.0.1:5000&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;endpoints:&lt;/span&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;/&lt;/li&gt;&lt;li&gt;/get_json&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="25" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;URL base:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;http://127.0.0.1:5000&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;endpoints:&lt;/span&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;/&lt;/li&gt;&lt;li&gt;/get_json&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="280" y="160" width="150" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" value="REST API&lt;div&gt;GET&lt;/div&gt;&lt;div&gt;POST&lt;/div&gt;&lt;div&gt;PUT&lt;/div&gt;&lt;div&gt;DELETE&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="26" value="REST API&lt;div&gt;GET&lt;/div&gt;&lt;div&gt;POST&lt;/div&gt;&lt;div&gt;PUT&lt;/div&gt;&lt;div&gt;DELETE&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="-80" y="280" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" style="edgeStyle=none;html=1;" edge="1" parent="1" source="27" target="10">
+                <mxCell id="28" style="edgeStyle=none;html=1;" parent="1" source="27" target="10" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="27" value="Flask&lt;div&gt;API&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="27" value="Flask&lt;div&gt;API&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry y="560" width="80" height="120" as="geometry"/>
                 </mxCell>
                 <UserObject label="https://api.example.com/v1/users?role=admin&amp;status=active&#xa;\________________________/\____/ \______________________/&#xa;server URL       endpoint    query parameters&#xa;path" link="https://api.example.com/v1/users?role=admin&amp;status=active&#xa;\________________________/\____/ \______________________/&#xa;server URL       endpoint    query parameters&#xa;path" id="30">
-                    <mxCell style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxCell style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                         <mxGeometry x="-520" y="360" width="400" height="80" as="geometry"/>
                     </mxCell>
                 </UserObject>

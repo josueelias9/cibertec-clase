@@ -22,6 +22,12 @@ def index():
 def ejemplo_json():
     return {"mensaje": "Hola, este es un ejemplo de respuesta JSON"}
 
+
+
+@app.route("/mostrar-blog")
+def mostrar_blog():
+    return render_template("base.html")
+
 if __name__ == "__main__":
     app.run()
 
