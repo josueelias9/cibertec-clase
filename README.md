@@ -18,7 +18,7 @@ conda install <>
 
 
 ```sh
-flask --app proyecto run
+flask --app proyecto run --debug
 ```
 
 
@@ -26,6 +26,11 @@ flask --app proyecto run
 conda create --name <> python=3.10
 ```
 
+Como clonar el repositorio?
+
+```
+git clone https://github.com/josueelias9/cibertec-clase.git
+```
 
 
 
