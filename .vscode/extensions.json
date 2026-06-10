@@ -3,6 +3,8 @@
         "shahilkumar.docxreader",
         "hediet.vscode-drawio", // para que puedan visalizar los diagramas de drawio
         "humao.rest-client",  // para que puedan probar las APIs sin salir de VSCode
-        "qwtel.sqlite-viewer", // para que puedan visualizar las bases de datos SQLite sin salir de VSCode
+        "qwtel.sqlite-viewer",
+        "bradlc.vscode-tailwindcss",
+        "ms-python.python", // para que puedan visualizar las bases de datos SQLite sin salir de VSCode
     ]
 }

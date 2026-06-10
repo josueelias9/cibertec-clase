@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">
+    <div class="mb-3">
+        <label for="title" class="form-label">Título</label>
+        <input type="text" class="form-control" id="title" name="title" value="{{ post.title }}">
+    </div>
+    <div class="mb-3">
+        <label for="body" class="form-label">Contenido</label>
+        <textarea class="form-control" id="body" name="body" rows="5">{{ post.body }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+    {% endblock %}
