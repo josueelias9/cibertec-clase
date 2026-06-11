@@ -1,2 +1,3 @@
 *.pyc
 flaskr.sqlite
+instance/flaskr.sqlite-journal

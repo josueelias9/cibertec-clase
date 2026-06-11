@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for,g
 from .db import get_db
 
 bp = Blueprint("blog", __name__, url_prefix="/blog")
@@ -42,7 +42,7 @@ def update_blog(id):
             "UPDATE post SET title = ?, body = ? WHERE id = ?", (titulo, contenido, id)
         )
         db.commit()
-        return redirect(url_for("blog.ver_blog"))
+        return redirect(url_for("index"))
 
     return render_template("blog/update.html", post=post)
 

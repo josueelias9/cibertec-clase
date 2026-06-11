@@ -9,9 +9,10 @@
             "name": "Python Debugger: Flask",
             "type": "debugpy",
             "request": "launch",
+            "python": "/home/josue3/anaconda3/envs/flask_counter/bin/python",
             "module": "flask",
             "env": {
-                "FLASK_APP": "proyecto/__init__.py",
+                "FLASK_APP": "proyecto",
                 "FLASK_DEBUG": "1"
             },
             "args": [
