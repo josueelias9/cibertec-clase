@@ -39,5 +39,8 @@ se requiere hacer un app sencillo donde se pueda subir blogs. Se debe poder visu
 
 - crear el html para mostrar nuestro blog
 - crear endpoint para visualizar el blog
+
 - crear endpoint para subir un nuevo blog
-- crear endpoint para crear usuario
+- ordenar nuestro codigo
+- crear endpoint para actualizar blog
+- aprenderemos como agregar estilo a nuestra pagina web (basico)

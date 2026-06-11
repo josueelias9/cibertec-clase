@@ -1,13 +1,22 @@
 <mxfile host="65bd71144e">
     <diagram id="ry064Uhtu3ko85uZiqpe" name="Page-1">
-        <mxGraphModel dx="1469" dy="307" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1333" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="33" value="vive en nuestro SO local&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="240" width="440" height="160" as="geometry"/>
+                </mxCell>
                 <mxCell id="21" value="server&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
                     <mxGeometry x="-40" y="520" width="480" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="31">
+                <mxCell id="32" style="edgeStyle=none;html=1;" parent="1" source="2" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="34">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="36">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="flask&lt;div&gt;counter&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -52,7 +61,7 @@
                     <mxGeometry x="-150" y="580" width="33.6" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;URL base:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;http://127.0.0.1:5000&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;endpoints:&lt;/span&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;/ (para tests)&lt;/li&gt;&lt;li&gt;/init-db (para grear la base de datos con tablas)&lt;br&gt;&lt;/li&gt;&lt;li&gt;/agregar-blog (para agregar un nuevo blog a la DB)&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="80" width="160" height="160" as="geometry"/>
+                    <mxGeometry x="240" y="40" width="160" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="26" value="REST API&lt;div&gt;&lt;ul&gt;&lt;li&gt;GET&lt;/li&gt;&lt;li&gt;POST&lt;/li&gt;&lt;li&gt;PUT&lt;/li&gt;&lt;li&gt;DELETE&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="-80" y="280" width="120" height="120" as="geometry"/>
@@ -68,8 +77,14 @@
                         <mxGeometry x="-520" y="360" width="400" height="80" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="31" value="crear DB&lt;div&gt;crear las tablas user y post&lt;/div&gt;&lt;div&gt;agregar datos a tablas existentes&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                <mxCell id="31" value="crear DB&lt;div&gt;crear las tablas user y post&lt;/div&gt;&lt;div&gt;agregar datos a tablas existentes&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
                     <mxGeometry x="480" y="260" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Postgres AWS" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="560" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Postgres contenedor" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="440" width="80" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
