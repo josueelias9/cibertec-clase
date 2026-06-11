@@ -5,21 +5,31 @@ from .db import get_db
 
 bp = Blueprint("blog", __name__, url_prefix="/cibertec")
 
-@bp.route("/mostrar-blog")
+@bp.route("/mostrar-blog", methods=["GET"])
 def mostrar_blog():
     return render_template("blog/blog.html")
+
+
+
+@bp.route("/index")
+def index():
+    db = get_db()
+    posts = db.execute(
+        "SELECT * FROM post"
+    ).fetchall()
+    return render_template("blog/index.html", posts=posts)
 
 
 @bp.route("/create", methods=["GET", "POST"])
 def create_blog():
     if request.method == "POST":
-        titulo = request.form["titulo"]
-        contenido = request.form["content"]
+        title = request.form["title"]
+        body = request.form["body"]
         author_id = 1
         db = get_db()
         db.execute(
             "INSERT INTO post (title, body, author_id) VALUES (?, ?,?)",
-            (titulo, contenido,author_id)
+            (title, body, author_id)
         )
         # Aquí se procesaría el formulario para crear una nueva entrada de blog
         return {"info":"Nueva entrada de blog creada"}
