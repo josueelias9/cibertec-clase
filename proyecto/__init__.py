@@ -8,8 +8,6 @@ def create_app(test_config=None):
         DATABASE=os.path.join(app.instance_path, "flaskr.sqlite"),
     )
 
-    from . import blog
-    app.register_blueprint(blog.bp)
 
 
     @app.route("/init-db/")
@@ -22,5 +20,11 @@ def create_app(test_config=None):
     @app.route("/")
     def index():
         return render_template("home/index.html")
+
+    from . import db
+    db.init_app(app)
+
+    from . import blog
+    app.register_blueprint(blog.bp)
 
     return app
