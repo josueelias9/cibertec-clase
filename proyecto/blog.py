@@ -1,17 +1,15 @@
 
 
-from flask import Blueprint, render_template, request,redirect
-from .db import get_db
+from flask import Blueprint, render_template, request, redirect
+from .models import Post
+from .db import db_session
 
 bp = Blueprint("blog", __name__, url_prefix="/cibertec")
 
 
 @bp.route("/index")
 def index():
-    db = get_db()
-    posts = db.execute(
-        "SELECT * FROM post"
-    ).fetchall()
+    posts = Post.query.order_by(Post.created.desc()).all()
     return render_template("blog/index.html", posts=posts)
 
 
@@ -21,45 +19,31 @@ def create():
         title = request.form["title"]
         body = request.form["body"]
         author_id = 1
-        db = get_db()
-        db.execute(
-            "INSERT INTO post (title, body, author_id) VALUES (?, ?,?)",
-            (title, body, author_id)
-        )
-        db.commit()
-        # Aquí se procesaría el formulario para crear una nueva entrada de blog
+        post = Post(title=title, body=body, author_id=author_id)
+        db_session.add(post)
+        db_session.commit()
         return redirect("/cibertec/index")
     return render_template("blog/create.html")
 
 
-
-@bp.route("/<int:id>/update",methods=("GET", "POST"))
+@bp.route("/<int:id>/update", methods=("GET", "POST"))
 def update(id):
     post = get_post(id)
-    db = get_db()
     if request.method == "POST":
-        title = request.form["title"]
-        body = request.form["body"]
-        db.execute(
-            "UPDATE post SET title = ?, body = ? WHERE id = ?",
-            (title, body,id)
-        )
-        db.commit()
+        post.title = request.form["title"]
+        post.body = request.form["body"]
+        db_session.commit()
         return redirect("/cibertec/index")
     return render_template("blog/update.html", post=post)
 
 
 def get_post(id):
-    db = get_db()
-    post = db.execute(
-        "SELECT * FROM post WHERE id = ?",
-        (id,)
-    ).fetchone()
-    return post
+    return db_session.get(Post, id)
+
 
 @bp.route("/<int:id>/delete", methods=("POST",))
 def delete(id):
-    db = get_db()
-    db.execute("DELETE FROM post WHERE id = ?", (id,))
-    db.commit()
+    post = get_post(id)
+    db_session.delete(post)
+    db_session.commit()
     return redirect("/cibertec/index")

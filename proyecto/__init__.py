@@ -2,27 +2,23 @@ import os
 from flask import Flask, render_template
 
 def create_app(test_config=None):
-    app = Flask(__name__,instance_relative_config=True)
-
-    app.config.from_mapping(
-        DATABASE=os.path.join(app.instance_path, "flaskr.sqlite"),
-    )
-
-
+    app = Flask(__name__, instance_relative_config=True)
 
     @app.route("/init-db/")
     def init_db():
-        from . import db
-        db.init_db()
+        from .db import init_db as _init_db
+        _init_db()
         return "Base de datos inicializada"
-
 
     @app.route("/")
     def index():
         return render_template("home/index.html")
 
-    from . import db
-    db.init_app(app)
+    from .db import db_session
+
+    @app.teardown_appcontext
+    def shutdown_session(exception=None):
+        db_session.remove()
 
     from . import blog
     app.register_blueprint(blog.bp)
