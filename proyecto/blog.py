@@ -1,14 +1,9 @@
 
 
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request,redirect
 from .db import get_db
 
 bp = Blueprint("blog", __name__, url_prefix="/cibertec")
-
-@bp.route("/mostrar-blog", methods=["GET"])
-def mostrar_blog():
-    return render_template("blog/blog.html")
-
 
 
 @bp.route("/index")
@@ -20,8 +15,8 @@ def index():
     return render_template("blog/index.html", posts=posts)
 
 
-@bp.route("/create", methods=["GET", "POST"])
-def create_blog():
+@bp.route("/create", methods=("GET", "POST"))
+def create():
     if request.method == "POST":
         title = request.form["title"]
         body = request.form["body"]
@@ -31,14 +26,40 @@ def create_blog():
             "INSERT INTO post (title, body, author_id) VALUES (?, ?,?)",
             (title, body, author_id)
         )
+        db.commit()
         # Aquí se procesaría el formulario para crear una nueva entrada de blog
-        return {"info":"Nueva entrada de blog creada"}
+        return redirect("/cibertec/index")
     return render_template("blog/create.html")
 
-@bp.route("/eliminar-blog")
-def eliminar_blog():
-    pass
 
-@bp.route("/update-blog")
-def update_blog():
-    pass
+
+@bp.route("/<int:id>/update",methods=("GET", "POST"))
+def update(id):
+    post = get_post(id)
+    db = get_db()
+    if request.method == "POST":
+        title = request.form["title"]
+        body = request.form["body"]
+        db.execute(
+            "UPDATE post SET title = ?, body = ? WHERE id = ?",
+            (title, body,id)
+        )
+        db.commit()
+        return redirect("/cibertec/index")
+    return render_template("blog/update.html", post=post)
+
+
+def get_post(id):
+    db = get_db()
+    post = db.execute(
+        "SELECT * FROM post WHERE id = ?",
+        (id,)
+    ).fetchone()
+    return post
+
+@bp.route("/<int:id>/delete", methods=("POST",))
+def delete(id):
+    db = get_db()
+    db.execute("DELETE FROM post WHERE id = ?", (id,))
+    db.commit()
+    return redirect("/cibertec/index")

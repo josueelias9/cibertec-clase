@@ -18,4 +18,9 @@ def create_app(test_config=None):
         db.init_db()
         return "Base de datos inicializada"
 
+
+    @app.route("/")
+    def index():
+        return render_template("home/index.html")
+
     return app

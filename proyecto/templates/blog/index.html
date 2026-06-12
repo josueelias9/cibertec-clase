@@ -14,8 +14,9 @@
 
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-{% for post in posts %}
-    <article class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/10 hover:scale-105 hover:shadow-2xl transition duration-300">
+    {% for post in posts %}
+    <article
+        class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/10 hover:scale-105 hover:shadow-2xl transition duration-300">
 
         <div class="flex items-center gap-2 mb-4">
             <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">
@@ -33,12 +34,11 @@
 
         <div class="mt-6">
             <button class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">
-                Leer más
+                <a class="action" href="{{ url_for('blog.update', id=post['id']) }}">Ver</a>
             </button>
         </div>
-
     </article>
-{% endfor %}
+    {% endfor %}
 
 </div>
 
