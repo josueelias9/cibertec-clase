@@ -1,6 +1,6 @@
 
 
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect
 from .db import get_db
 
 bp = Blueprint("blog", __name__, url_prefix="/cibertec")
@@ -29,15 +29,18 @@ def create():
         )
         db.commit()
         # Aquí se procesaría el formulario para crear una nueva entrada de blog
-        return {"info":"Nueva entrada de blog creada"}
+        return redirect("/cibertec/index")
     return render_template("blog/create.html")
+
 
 @bp.route("/<int:id>/delete", methods=("POST",))
 def delete(id):
     post = get_post(id)
     db = get_db()
     db.execute("DELETE FROM post WHERE id = ?", (id,))
-    return {"info":"Entrada de blog eliminada"}
+    db.commit()
+    return redirect("/cibertec/index")
+
 
 @bp.route("/<int:id>/update", methods=("GET", "POST"))
 def update(id):
@@ -52,7 +55,7 @@ def update(id):
             (title, body, id)
         )
         db.commit()
-        return {"info":"Entrada de blog actualizada"}
+        return redirect("/cibertec/index")
     return render_template("blog/update.html", post=post)
 
 
