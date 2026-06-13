@@ -5,10 +5,6 @@ from .db import get_db
 
 bp = Blueprint("blog", __name__, url_prefix="/cibertec")
 
-@bp.route("/mostrar-blog", methods=["GET"])
-def mostrar_blog():
-    return render_template("blog/blog.html")
-
 
 
 @bp.route("/index")
@@ -21,7 +17,7 @@ def index():
 
 
 @bp.route("/create", methods=["GET", "POST"])
-def create_blog():
+def create():
     if request.method == "POST":
         title = request.form["title"]
         body = request.form["body"]
@@ -35,10 +31,40 @@ def create_blog():
         return {"info":"Nueva entrada de blog creada"}
     return render_template("blog/create.html")
 
-@bp.route("/eliminar-blog")
-def eliminar_blog():
-    pass
+@bp.route("/<int:id>/delete", methods=("POST",))
+def delete():
+    post = get_post(id)
+    db = get_db()
+    db.execute("DELETE FROM post WHERE id = ?", (id,))
+    return {"info":"Entrada de blog eliminada"}
 
-@bp.route("/update-blog")
-def update_blog():
-    pass
+@bp.route("/<int:id>/update", methods=("GET", "POST"))
+def update(id):
+    post = get_post(id)
+    if request.method == "POST":
+        title = request.form["title"]
+        body = request.form["body"]
+
+        db = get_db()
+        db.execute(
+            "UPDATE post SET title = ?, body = ? WHERE id = ?",
+            (title, body, id)
+        )
+        return {"info":"Entrada de blog actualizada"}
+    return render_template("blog/update.html", post=post)
+
+
+def get_post(id):
+    db = get_db()
+    post = db.execute(
+        "SELECT * FROM post WHERE id = ?", (id,)
+    ).fetchone()
+
+    return post
+
+
+
+
+# http:127.0.0.1:5000/cibertec/2/delete
+# http:127.0.0.1:5000/cibertec/1/delete
+# http:127.0.0.1:5000/cibertec/10/delete

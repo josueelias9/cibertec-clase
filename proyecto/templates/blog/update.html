@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Actualizar entrada de blog</h1>
+  <form method="post">
+    <label for="title">Título</label>
+    <input type="text" id="title" name="title" value="{{ post.title }}">
+    <label for="body">Contenido</label>
+    <textarea id="body" name="body">{{ post.body }}</textarea>
+    <button type="submit">Actualizar</button>
+  </form>
+{% endblock %}

@@ -7,6 +7,7 @@
 {% for post in posts %}
     <h2>{{ post['id'] }} - {{ post['title'] }}</h2>
     <p>{{ post['body'] }}</p>
+    <a href="{{ url_for('blog.update', id=post['id']) }}">Actualizar</a>
 {% endfor %}
 
 
