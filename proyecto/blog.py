@@ -27,12 +27,13 @@ def create():
             "INSERT INTO post (title, body, author_id) VALUES (?, ?,?)",
             (title, body, author_id)
         )
+        db.commit()
         # Aquí se procesaría el formulario para crear una nueva entrada de blog
         return {"info":"Nueva entrada de blog creada"}
     return render_template("blog/create.html")
 
 @bp.route("/<int:id>/delete", methods=("POST",))
-def delete():
+def delete(id):
     post = get_post(id)
     db = get_db()
     db.execute("DELETE FROM post WHERE id = ?", (id,))
@@ -50,6 +51,7 @@ def update(id):
             "UPDATE post SET title = ?, body = ? WHERE id = ?",
             (title, body, id)
         )
+        db.commit()
         return {"info":"Entrada de blog actualizada"}
     return render_template("blog/update.html", post=post)
 
