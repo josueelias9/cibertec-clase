@@ -18,7 +18,7 @@ conda install <>
 
 
 ```sh
-flask --app proyecto run --debug
+flask --app flaskr run --debug
 ```
 
 
@@ -32,6 +32,11 @@ Como clonar el repositorio?
 git clone https://github.com/josueelias9/cibertec-clase.git
 ```
 
+
+```sh
+# validar entorno activado
+conda install Flask-SQLAlchemy
+```
 
 
 # Tarea

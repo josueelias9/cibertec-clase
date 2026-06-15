@@ -10,9 +10,10 @@
             "type": "debugpy",
             "request": "launch",
             "python": "/home/josue3/anaconda3/envs/flask_counter/bin/python",
+            "cwd": "${workspaceFolder}/flask",
             "module": "flask",
             "env": {
-                "FLASK_APP": "proyecto",
+                "FLASK_APP": "flaskr",
                 "FLASK_DEBUG": "1"
             },
             "args": [

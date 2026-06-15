@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="ry064Uhtu3ko85uZiqpe" name="Page-1">
-        <mxGraphModel dx="1333" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1436" dy="428" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="33" value="vive en nuestro SO local&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="33" value="vive en nuestro SO local&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="240" y="240" width="440" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="21" value="server&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
@@ -13,10 +13,10 @@
                 <mxCell id="32" style="edgeStyle=none;html=1;" parent="1" source="2" target="31" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="34">
+                <mxCell id="35" style="edgeStyle=none;html=1;" parent="1" source="2" target="34" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="36">
+                <mxCell id="37" style="edgeStyle=none;html=1;" parent="1" source="2" target="36" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="flask&lt;div&gt;counter&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -34,27 +34,56 @@
                 <mxCell id="9" value="API" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="240" y="280" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" style="edgeStyle=none;html=1;" parent="1" source="10" target="11" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="18" value="3" style="edgeStyle=none;html=1;" parent="1" source="10" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="290" y="630"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="19" style="edgeStyle=none;html=1;" parent="1" source="10" target="12" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="19" value="5" style="edgeStyle=none;html=1;" parent="1" source="10" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="230" y="620"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="10" value="controller" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="200" y="560" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="model" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="280" y="640" width="120" height="40" as="geometry"/>
+                <mxCell id="46" value="4" style="edgeStyle=none;html=1;" edge="1" parent="1" source="11" target="10">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="310" y="620"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="29" style="edgeStyle=none;html=1;" parent="1" source="12" target="27" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="11" value="model&lt;div&gt;- antes: comandos SQL X&lt;/div&gt;&lt;div&gt;-&amp;nbsp; ahora: ORM&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="640" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="7" style="edgeStyle=none;html=1;" parent="1" source="10" target="27" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="140" y="610"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" value="6" style="edgeStyle=none;html=1;" edge="1" parent="1" source="12" target="10">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="200" y="620"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="12" value="view" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="120" y="640" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" style="edgeStyle=none;html=1;" parent="1" source="15" target="27" edge="1">
+                <mxCell id="16" value="1" style="edgeStyle=none;html=1;" parent="1" source="15" target="27" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="540" y="570" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-60" y="610"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="15" value="otro servidor&lt;div&gt;una pagina web&lt;/div&gt;&lt;div&gt;un app movil&lt;/div&gt;&lt;div&gt;etc&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/cell_phone.svg;" parent="1" vertex="1">
@@ -66,8 +95,19 @@
                 <mxCell id="26" value="REST API&lt;div&gt;&lt;ul&gt;&lt;li&gt;GET&lt;/li&gt;&lt;li&gt;POST&lt;/li&gt;&lt;li&gt;PUT&lt;/li&gt;&lt;li&gt;DELETE&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="-80" y="280" width="120" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" style="edgeStyle=none;html=1;" parent="1" source="27" target="10" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="28" value="2" style="edgeStyle=none;html=1;" parent="1" source="27" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="140" y="590"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="8" style="edgeStyle=none;html=1;" edge="1" parent="1" source="27" target="15">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-60" y="630"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="27" value="Flask&lt;div&gt;API&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry y="560" width="80" height="120" as="geometry"/>
@@ -80,11 +120,32 @@
                 <mxCell id="31" value="crear DB&lt;div&gt;crear las tablas user y post&lt;/div&gt;&lt;div&gt;agregar datos a tablas existentes&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
                     <mxGeometry x="480" y="260" width="160" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" value="Postgres AWS" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                <mxCell id="34" value="Postgres AWS" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
                     <mxGeometry x="480" y="560" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="Postgres contenedor" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                <mxCell id="36" value="Postgres contenedor" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
                     <mxGeometry x="480" y="440" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Flask&lt;div&gt;- creado endpoints&lt;/div&gt;&lt;div&gt;- creado HTML&lt;/div&gt;&lt;div&gt;- connexion&lt;/div&gt;&lt;div&gt;- ORM&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="840" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="edgeStyle=none;html=1;" parent="1" source="39" target="41" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Swagger + OpenAPI" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="760" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="FastAPI" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="840" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="- creacion de endpoints con Flask&lt;div&gt;- enviar HTML desde los endpoints&lt;/div&gt;&lt;div&gt;- domini de los metodos GET, POST, PUT, DELETE&lt;/div&gt;&lt;div&gt;- ORM (faltante)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-80" y="960" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="1040" as="sourcePoint"/>
+                        <mxPoint x="240" y="760" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>

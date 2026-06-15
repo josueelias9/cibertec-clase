@@ -22,4 +22,10 @@ def create_app(test_config=None):
     def index():
         return render_template("home/index.html")
 
+    from .db import db_session
+
+    @app.teardown_appcontext
+    def shutdown_session(exception=None):
+        db_session.remove()
+
     return app
