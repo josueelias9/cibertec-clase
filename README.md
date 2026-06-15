@@ -33,10 +33,8 @@ git clone https://github.com/josueelias9/cibertec-clase.git
 ```
 
 
-```sh
-# validar entorno activado
-conda install Flask-SQLAlchemy
-```
+`class="[^"]*"`
+
 
 
 # Tarea

@@ -4,7 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "name": "Python Debugger: FastAPI",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "python": "/home/josue3/anaconda3/envs/flask_counter/bin/python",
+            "cwd": "${workspaceFolder}/backend_fastapi",
+            "args": [
+                "main:app",
+                "--reload"
+            ],
+            "jinja": true
+        },
         {
             "name": "Python Debugger: Flask",
             "type": "debugpy",

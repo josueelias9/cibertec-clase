@@ -1,0 +1,36 @@
+@host = http://localhost:8000
+
+### JSON Response
+GET {{host}}/others/json_content
+
+### HTML Response
+GET {{host}}/others/html_content
+
+### Plain Text Response
+GET {{host}}/others/text_content
+
+### Read Item con query param
+GET {{host}}/others/items/1?q=hola
+
+###
+
+GET {{host}}/openapi
+
+
+### Obtener otro item por ID
+GET {{host}}/items/12
+
+### Obtener todos los items
+GET {{host}}/items/
+
+### Crear un item
+POST {{host}}/items/
+Content-Type: application/json
+
+{
+    "name": "Laptop",
+    "description": "Laptop gamer",
+    "price": 2500.50,
+    "tax": 450.09
+}
+

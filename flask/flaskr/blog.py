@@ -2,18 +2,16 @@
 from datetime import datetime
 from flask import Blueprint, render_template, request, redirect
 from .db import db_session
+from .models import Post
 
 bp = Blueprint("blog", __name__, url_prefix="/blog")
 
 
-from .models import Post
 
 @bp.route("/index")
 def index():
     posts = Post.query.all()
     return render_template("blog/index.html", posts=posts)
-
-
 
 @bp.route("/create", methods=("GET", "POST"))
 def create():
@@ -23,8 +21,8 @@ def create():
         post = Post(title=title, body=body, author_id=1, created=datetime.now())
         db_session.add(post)
         db_session.commit()
-        # Aquí se procesaría el formulario para crear una nueva entrada de blog
         return redirect("/blog/index")
+        
     return render_template("blog/create.html")
 
 
@@ -42,15 +40,10 @@ def update(id):
     if request.method == "POST":
         post.title = request.form["title"]
         post.body = request.form["body"]
-
         db_session.commit()
-
         return redirect("/blog/index")
     return render_template("blog/update.html", post=post)
 
 
 def get_post(id):
-    post = Post.query.filter_by(id=id).first()
-    return post
-
-
+    return Post.query.filter_by(id=id).first()
