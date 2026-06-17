@@ -1,3 +1,31 @@
+
+@baseUrl = http://localhost:5000
+
+### Ver lista de posts
+GET {{baseUrl}}/blog/index
+
+### Mostrar formulario de creación
+GET {{baseUrl}}/blog/create
+
+### Crear post
+POST {{baseUrl}}/blog/create
+Content-Type: application/x-www-form-urlencoded
+
+title=Mi primer post&body=Hola mundo
+
+### Mostrar formulario de edición del post 1
+GET {{baseUrl}}/blog/1/update
+
+### Actualizar post 1
+POST {{baseUrl}}/blog/1/update
+Content-Type: application/x-www-form-urlencoded
+
+title=Nuevo título&body=Contenido actualizado
+
+### Eliminar post 1
+POST {{baseUrl}}/blog/1/delete
+
+
 ###
 
 GET http://127.0.0.1:5000/init-db

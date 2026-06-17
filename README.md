@@ -18,6 +18,7 @@ conda install <>
 
 
 ```sh
+cd flask
 flask --app flaskr run --debug
 ```
 
