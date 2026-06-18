@@ -1,19 +1,9 @@
 
-from pydantic import BaseModel
 from fastapi import APIRouter
-
+from models import Item, Items
 router = APIRouter(prefix="/items")
 
-class Item(BaseModel):
-    name: str
-    description: str = None
-    price: float
-    tax: float = None
-    id: int = None
 
-
-class Items(BaseModel):
-    items: list[Item]
 
 items = [
     Item(id=1 , name="Foo", description="A very nice Item", price=35.4, tax=3.2),
@@ -31,6 +21,17 @@ def read_item(id:int):
     if item is None:
         return Item(id=id, name="Unknown", description="No description", price=0.0, tax=0.0)
     return item
+
+
+
+@router.put("/{id}", response_model=Item)
+def update_item(id:int, mi_item: Item):
+    # aqui esta mi logica para actualizar el item y guardarlo en la base de datos
+    return items[2]
+
+
+
+
 
 
 @router.get("/", response_model=Items)
