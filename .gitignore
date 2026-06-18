@@ -1,3 +1,4 @@
 *.pyc
 flaskr.sqlite
 meetingAttendanceList.csv
+notas2.csv
