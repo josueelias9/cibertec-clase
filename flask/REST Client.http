@@ -1,3 +1,55 @@
+
+@baseUrl = http://localhost:5000
+
+# ================================ blog_json routes
+
+### Ver lista de posts
+
+GET {{baseUrl}}/blog_json/
+
+### Crear post
+
+POST {{baseUrl}}/blog_json/create
+Content-Type: application/x-www-form-urlencoded
+
+title=Mi primer post&body=Hola mundo
+
+### Actualizar post
+
+POST {{baseUrl}}/blog_json/2/update
+Content-Type: application/x-www-form-urlencoded
+
+title=Nuevo título&body=Contenido actualizado
+
+### Eliminar post
+
+POST {{baseUrl}}/blog_json/4/delete
+
+# ================================ auth routes
+
+###
+
+GET {{baseUrl}}/auth/
+
+###
+
+POST {{baseUrl}}/auth/create
+Content-Type: application/x-www-form-urlencoded
+
+username=usuario23&password=contraseña123
+
+###
+
+POST {{baseUrl}}/auth/1/update
+Content-Type: application/x-www-form-urlencoded
+
+username=usuario26&password=nuevaContraseña456nuevo
+
+###
+
+POST {{baseUrl}}/auth/2/delete
+
 ###
 
 GET http://127.0.0.1:5000/init-db
+

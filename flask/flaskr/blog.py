@@ -8,7 +8,7 @@ bp = Blueprint("blog", __name__, url_prefix="/blog")
 
 from .models import Post
 
-@bp.route("/index")
+@bp.route("/")
 def index():
     posts = Post.query.all()
     return render_template("blog/index.html", posts=posts)
@@ -28,17 +28,9 @@ def create():
     return render_template("blog/create.html")
 
 
-@bp.route("/<int:id>/delete", methods=("POST",))
-def delete(id):
-    post = get_post(id)
-    db_session.delete(post)
-    db_session.commit()
-    return redirect("/blog/index")
-
-
 @bp.route("/<int:id>/update", methods=("GET", "POST"))
 def update(id):
-    post = get_post(id)
+    post = Post.query.filter_by(id=id).first()
     if request.method == "POST":
         post.title = request.form["title"]
         post.body = request.form["body"]
@@ -49,8 +41,13 @@ def update(id):
     return render_template("blog/update.html", post=post)
 
 
-def get_post(id):
+@bp.route("/<int:id>/delete", methods=("POST",))
+def delete(id):
     post = Post.query.filter_by(id=id).first()
-    return post
+    db_session.delete(post)
+    db_session.commit()
+    return redirect("/blog/index")
+
+
 
 
