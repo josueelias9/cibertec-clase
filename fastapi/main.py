@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import yaml
 from fastapi.responses import PlainTextResponse, HTMLResponse, JSONResponse
 
-from routes import items, others
+from routes import items, others,websocket
 
 app = FastAPI(
     title="Clase 3.2 Cibertec",
@@ -11,6 +11,7 @@ app = FastAPI(
 )
 
 app.include_router(items.router)
+app.include_router(websocket.router)
 # app.include_router(others.router)
 
 # endpoint para mostrar el OpenAPI en formato YAML
