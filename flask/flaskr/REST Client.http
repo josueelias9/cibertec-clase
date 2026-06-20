@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:5000
+
+###
+
+GET {{baseUrl}}/blog_json/index
+
+
+
+###
+
+POST {{baseUrl}}/blog_json/create
+Content-Type: application/x-www-form-urlencoded
+
+title=Mi Titulo&body=Mi Cuerpo
+
+
+###
+
+POST {{baseUrl}}/blog_json/4/delete
+
+
+###
+
+POST {{baseUrl}}/blog_json/5/update
+Content-Type: application/x-www-form-urlencoded
+
+title=titulo actualizado&body=cuerpo actualizado

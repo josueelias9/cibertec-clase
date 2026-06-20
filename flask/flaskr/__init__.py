@@ -10,9 +10,10 @@ def create_app(test_config=None):
 
     from . import blog
     from . import jscode
+    from . import blog_json
     app.register_blueprint(jscode.bp)
     app.register_blueprint(blog.bp)
-
+    app.register_blueprint(blog_json.bp)
 
     @app.route("/init-db/")
     def init_db():

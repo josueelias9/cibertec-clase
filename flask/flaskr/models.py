@@ -11,6 +11,11 @@ class User(Base):
     username = Column(String(80), unique=True, nullable=False)
     password = Column(Text, nullable=False)
 
+    def to_dict(self):
+        return {
+            c.name: getattr(self, c.name) for c in self.__table__.columns
+        }
+
 
 class Post(Base):
     __tablename__ = 'post'
@@ -22,3 +27,9 @@ class Post(Base):
     author_id = Column(Integer, ForeignKey('user.id'), nullable=False)
 
     author = relationship('User', backref='posts')
+
+    def to_dict(self):
+        return {
+            c.name: getattr(self, c.name) for c in self.__table__.columns
+        }
+    
